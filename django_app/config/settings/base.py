@@ -27,6 +27,10 @@ CONFIG_SECRET_DEPLOY_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_deploy.jso
 
 config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())
 
+
+# Authentication
+AUTH_USER_MODEL = 'accounts.User'
+
 # ===============================================================================================================================
 
 
@@ -51,6 +55,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # public_apps
+    'accounts',
+    'product',
 ]
 
 MIDDLEWARE_CLASSES = [
